@@ -7,8 +7,7 @@ const evoli = pokemons.find(pokemon=>pokemon.nom === "Evoli");
 evoli.nom = "Petite chose fragile";
 pikachu.nom = "Bourrin électrique";
 
-const combatPikachuEvoli = 
-new Combat(pikachu,evoli);
+const combatPikachuEvoli = new Combat(pikachu,evoli);
 combatPikachuEvoli.run();
 const resultats = combatPikachuEvoli.logs;
 
