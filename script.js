@@ -1,6 +1,8 @@
-import {combatPikachuEvoli} from './modules/fights.js';
+import {Combat} from './modules/fights.js';
+import {pokemons} from './modules/pokemons.js';
 
-
+const combatPikachuEvoli = 
+new Combat(pokemons.find(pokemon=>pokemon.nom === "Pikachu"),pokemons.find(pokemon=>pokemon.nom === "Evoli"));
 combatPikachuEvoli.run();
 const resultats = combatPikachuEvoli.logs;
 

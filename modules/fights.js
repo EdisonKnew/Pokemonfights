@@ -72,5 +72,8 @@ export class Combat {
   
   }
 
-  export const combatPikachuEvoli = 
+
+  const combatPikachuEvoli = 
   new Combat(pokemons.find(pokemon=>pokemon.nom === "Pikachu"),pokemons.find(pokemon=>pokemon.nom === "Evoli"));
+
+  export const combats = [combatPikachuEvoli];
