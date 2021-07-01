@@ -10,18 +10,19 @@ export class Pokemon {
   }
   tauxCritique = 0.1;
   attaque = (pokemonCible)=>{
-    let degats = 0;
+
+   const action = (attaque)=> {
+      const degats = attaqueCritique ? attaque *2: attaque.degats ;
+      pokemonCible.pv -= attaqueCritique ? degats = attaque.degats *2: attaque.degats ;
+      result = `${this.nom} a attaqué avec ${attaque.libelle} ${attaqueCritique ? "ATTAQUE CRITIQUE" :""}. Il a fait ${degats} dégats`;
+    }
+
     let result = "";
     const attaqueCritique = Math.random() < this.tauxCritique? true: false;
     if(this.pv < this.pv /5){
-      degats = attaqueCritique ? this.attaque1.degats *2: this.attaque1.degats ;
-      pokemonCible.pv -= attaqueCritique ? degats = this.attaque1.degats *2: this.attaque1.degats ;
-      result = `${this.nom} a attaqué avec ${this.attaque1.libelle} ${attaqueCritique ? "ATTAQUE CRITIQUE" :""}. Il a fait ${degats} dégats`;
+      action(this.attaque1);
     }else {
-      degats = attaqueCritique ? this.attaque2.degats *2: this.attaque2.degats ;
-      pokemonCible.pv -= attaqueCritique ? degats = this.attaque2.degats *2: this.attaque2.degats ;
-      result = `${this.nom} a attaqué avec ${this.attaque2.libelle} ${attaqueCritique ? "ATTAQUE CRITIQUE" :""}. Il a fait ${degats} dégats`;
-    }
+      action(this.attaque2);    }
     return result
   };
 }
