@@ -1,4 +1,4 @@
-import {combatPikachuEvoli} from './modules/pokemons.js';
+import {combatPikachuEvoli} from './modules/fights.js';
 
 
 combatPikachuEvoli.run();
