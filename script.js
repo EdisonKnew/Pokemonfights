@@ -1,10 +1,8 @@
-import { Combat } from './modules/combat.js';
-import { pokedex } from './modules/pokedex.js';
+import { combats } from './modules/combats.js';
 
 
-const combatPikachuEvoli = new Combat(pokedex.Mewtwo, pokedex.Evoli);
-combatPikachuEvoli.run();
-const resultats = combatPikachuEvoli.logs;
+combats.combatMewtwoEvoli.run();
+const resultats = combats.combatMewtwoEvoli.logs;
 
 customElements.define('show-pokemon-fight', class extends HTMLElement {
     connectedCallback() {
