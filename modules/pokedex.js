@@ -13,8 +13,6 @@ export const Mewtwo = new Pokemon("Mewtwo", 25, 6, "mental", 82);
 Mewtwo.attaque1 = attaques.chocMental;
 Mewtwo.attaque2 =attaques.instaWin;
 
-export const pokemons =[Evoli,Pikachu,Mewtwo];
-
 export const pokedex ={
     Evoli,
     Pikachu,

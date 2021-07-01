@@ -15,14 +15,11 @@ export class Pokemon {
       const degats = attaqueCritique ? attaque *2: attaque.degats ;
       pokemonCible.pv -= attaqueCritique ? degats = attaque.degats *2: attaque.degats ;
       result = `${this.nom} a attaqué avec ${attaque.libelle} ${attaqueCritique ? "ATTAQUE CRITIQUE" :""}. Il a fait ${degats} dégats`;
-    }
+    };
 
     let result = "";
     const attaqueCritique = Math.random() < this.tauxCritique? true: false;
-    if(this.pv < this.pv /5){
-      action(this.attaque1);
-    }else {
-      action(this.attaque2);    }
+    this.pv < this.pv /5 ? action(this.attaque1) : action(this.attaque2);
     return result
   };
 }
