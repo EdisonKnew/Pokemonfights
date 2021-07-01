@@ -59,7 +59,12 @@ class Combat {
     this.logs.push("-------------------------------------------------------------------------------------");
 
     while(this.ordreAttaque[0].pv >= 0 && this.ordreAttaque[1].pv >= 0 ){
-
+      this.nbRounds ++;
+      this.logs.push(`Round ${this.nbRounds}`);
+    
+      this.afficherPv(this.ordreAttaque[0]);
+      this.afficherPv(this.ordreAttaque[1]);
+      this.logs.push("                  ------------------------------------                              ");
       this.attaqueRound();
       this.logs.push("-------------------------------------------------------------------------------------");
     }
@@ -72,9 +77,7 @@ class Combat {
   attaqueRound = () => {
     const pokemon1 = this.ordreAttaque[0];
     const pokemon2 = this.ordreAttaque[1];
-    this.nbRounds ++;
-    this.logs.push(`Round ${this.nbRounds}`);
-    
+
     this.logs.push(pokemon1.attaque(pokemon2)) ;
     if(pokemon2.pv <= 0){
       this.logs.push("-------------------------------------------------------------------------------------");
