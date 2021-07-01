@@ -15,11 +15,11 @@ class Pokemon {
     if(this.pv < this.pv /5){
       degats = attaqueCritique ? this.attaque1.degats *2: this.attaque1.degats ;
       pokemonCible.pv -= attaqueCritique ? degats = this.attaque1.degats *2: this.attaque1.degats ;
-      result = `${this.nom} a attaqué ${attaqueCritique ? "ATTAQUE CRITIQUE" :""}. Il a fait ${degats} dégats`;
+      result = `${this.nom} a attaqué avec ${this.attaque1.libelle} ${attaqueCritique ? "ATTAQUE CRITIQUE" :""}. Il a fait ${degats} dégats`;
     }else {
-      degats = attaqueCritique ? this.attaque1.degats *2: this.attaque1.degats ;
+      degats = attaqueCritique ? this.attaque2.degats *2: this.attaque2.degats ;
       pokemonCible.pv -= attaqueCritique ? degats = this.attaque2.degats *2: this.attaque2.degats ;
-      result = `${this.nom} a attaqué ${attaqueCritique ? "ATTAQUE CRITIQUE" :""}. Il a fait ${degats} dégats`;
+      result = `${this.nom} a attaqué avec ${this.attaque2.libelle} ${attaqueCritique ? "ATTAQUE CRITIQUE" :""}. Il a fait ${degats} dégats`;
     }
     return result
   };
