@@ -9,4 +9,14 @@ export const Pikachu = new Pokemon("Pikachu", 25, 6, "électrique", 82);
 Pikachu.attaque1 = attaques.find(attaque =>attaque.libelle ==="statik");
 Pikachu.attaque2 =attaques.find(attaque =>attaque.libelle ==="paratonnerre");
 
-export const pokemons =[Evoli,Pikachu];
+export const Mewtwo = new Pokemon("Mewtwo", 25, 6, "mental", 82);
+Mewtwo.attaque1 = attaques.find(attaque =>attaque.libelle ==="Choc mental");
+Mewtwo.attaque2 =attaques.find(attaque =>attaque.libelle ==="Insta Win");
+
+export const pokemons =[Evoli,Pikachu,Mewtwo];
+
+export const pokedex ={
+    Evoli,
+    Pikachu,
+    Mewtwo
+}

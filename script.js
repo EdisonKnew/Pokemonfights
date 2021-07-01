@@ -1,13 +1,8 @@
 import { Combat } from './modules/combat.js';
-import { pokemons } from './modules/pokemonListe.js';
+import { pokedex } from './modules/pokedex.js';
 
-const pikachu = pokemons.find(pokemon => pokemon.nom === "Pikachu");
-const evoli = pokemons.find(pokemon => pokemon.nom === "Evoli");
 
-evoli.nom = "Petite chose fragile";
-pikachu.nom = "Bourrin électrique";
-
-const combatPikachuEvoli = new Combat(pikachu, evoli);
+const combatPikachuEvoli = new Combat(pokedex.Mewtwo, pokedex.Evoli);
 combatPikachuEvoli.run();
 const resultats = combatPikachuEvoli.logs;
 
