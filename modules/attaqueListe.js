@@ -1,10 +1,5 @@
-export class Attaque {
-    constructor(libelle, degats) {
-      this.libelle = libelle;
-      this.degats = degats;
-    }
-  };
-  
+import {Attaque} from './attaque.js';
+
   const statik = new Attaque("statik", 10);
   const paratonnerre = new Attaque("paratonnerre", 25);
   const anticipation = new Attaque("anticipation", 15);

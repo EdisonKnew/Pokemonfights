@@ -1,5 +1,3 @@
-import {pokemons} from './pokemons.js';
-
 export class Combat {
     constructor(pokemon1, pokemon2) {
       this.pokemon1 = pokemon1;
@@ -72,9 +70,3 @@ export class Combat {
     logs = [];
   
   }
-
-
-  const combatPikachuEvoli = 
-  new Combat(pokemons.find(pokemon=>pokemon.nom === "Pikachu"),pokemons.find(pokemon=>pokemon.nom === "Evoli"));
-
-  export const combats = [combatPikachuEvoli];
